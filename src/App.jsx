@@ -1,5 +1,6 @@
 
 import NavBar from "./components/NavBar"; 
+import ProductsStore from "./components/ProductsStore";
 
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
   return (
     <>
       <NavBar/>
+      <ProductsStore/>
     </>
   )
 }
