@@ -1,11 +1,34 @@
-import React from 'react';
+import { useState, useEffect } from "react"
+import { useParams } from 'react-router-dom'
+import { ItemList } from "./ItemList"
+import './App.css'
 
-function ItemListContainer(props) {
+function ItemListContainer() {
+    const [products, setProducts] = useState([])
+    const { cid } = useParams()
+
+    useEffect(() => {
+        fetch('../data/products.json')
+            .then(response => response.json())
+            .then(prods => {
+                if (cid) {
+                    const productosFiltrados = prods.filter(prod => prod.categoria_prod == cid)
+                    setProducts(productosFiltrados)
+                } else {
+                    setProducts(prods)
+                }
+
+            })
+            .catch((error) => console.log(error))
+    }, [cid])
+
+
     return (
-        <div>
-            <a className="nav-link active" aria-current="page" href="#"style={{width: 300, marginLeft: 50}}>{props.mensaje}</a>
+        
+        <div className="productos-ver">
+            <ItemList products={products} />
         </div>
-    );
+    )
 }
 
 export default ItemListContainer;
