@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
 import { useParams } from 'react-router-dom'
 import { ItemList } from "./ItemList"
-import './App.css'
+// import './App.css'
+import '../styles/estilos.css'
 
 function ItemListContainer() {
     const [products, setProducts] = useState([])
@@ -26,7 +27,7 @@ function ItemListContainer() {
     return (
         
         <div className="productos-ver">
-            <ItemList products={products} />
+            <ItemList products={products} plantilla="Item"/>
         </div>
     )
 }

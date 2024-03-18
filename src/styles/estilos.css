@@ -1,0 +1,62 @@
+.productos-ver{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+  
+
+  .producto_id{
+    width: 500px;
+  }
+
+  .productos-container{
+    width: 500px;
+  }
+
+  .producto-card{
+    width: 450px !important;
+    height: 700px !important;
+  }
+
+  
+  
+  
+  .fotos_img{
+    width: 400px !important;
+    height: 300px !important;
+  }
+  
+
+
+  .item_list_st{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .item_list_st_foto{
+    width: 450px !important;
+    height: 400px !important;
+  }
+
+.item_detail{
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: white;
+  align-items: center;
+
+  margin-left: 800px;
+}
+
+  .item_detail_st_foto{
+    width: 450px !important;
+    height: 400px !important;
+  }
+
+  .item_list_st_nombre{
+    color: rgb(219, 17, 17);
+  }
+
+  
+  
+  
